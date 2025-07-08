@@ -32,6 +32,7 @@
 	
 	<!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
     
@@ -119,7 +120,7 @@
 
 
     <!-- About-->
-    <div id="about" class="basic-1 bg-gray">
+    <div id="about" class="basic-1 bg-gray" data-aos="fade-up">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
@@ -163,7 +164,7 @@
 
 
     <!-- Services -->
-    <div id="services" class="basic-2">
+    <div id="services" class="basic-2" data-aos="fade-up">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -200,7 +201,7 @@
 
 
     <!-- Details -->
-	<div class="split">
+	<div class="split" data-aos="fade-up">
 		<div class="area-1">
 		</div><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div class="area-2 bg-gray">
             <div class="container">    
@@ -248,7 +249,7 @@
 
 
     <!-- Projects -->
-    <div id="projects" class="basic-3">
+    <div id="projects" class="basic-3" data-aos="fade-up">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -283,7 +284,7 @@
 
 
     <!-- Works -->
-    <div class="basic-4">
+    <div class="basic-4" data-aos="fade-up">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
@@ -404,7 +405,7 @@
 
 
     <!-- Questions -->
-    <div class="accordion-1">
+    <div class="accordion-1" data-aos="fade-up">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -502,7 +503,7 @@
 
 
     <!-- Contact -->
-    <div id="contact" class="form-1 bg-gray">
+    <div id="contact" class="form-1 bg-gray" data-aos="fade-up">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -541,7 +542,7 @@
 
 
     <!-- Footer -->
-    <div class="footer bg-gray">
+    <div class="footer bg-gray" data-aos="fade-in">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -576,7 +577,7 @@
 
 
     <!-- Copyright -->
-    <div class="copyright bg-gray">
+    <div class="copyright bg-gray" data-aos="fade-in">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -620,6 +621,10 @@
                   console.log('FAILED...', error);
               });
       });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
 </body>
 </html>
