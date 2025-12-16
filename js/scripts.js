@@ -81,7 +81,9 @@
 function openProjectModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
-        modal.style.display = "block";
+        modal.style.display = "flex";
+        modal.style.alignItems = "center";
+        modal.style.justifyContent = "center";
         document.body.style.overflow = "hidden";
     }
 }
