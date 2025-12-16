@@ -76,3 +76,28 @@
 	});
 
 })(jQuery);
+
+/* Project Modal Functions */
+function openProjectModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = "block";
+        document.body.style.overflow = "hidden";
+    }
+}
+
+function closeProjectModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+}
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+    if (event.target.classList.contains('project-modal')) {
+        event.target.style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+}

@@ -679,13 +679,61 @@ input[type='checkbox'] {
 	height: 100%;
 }
 
-.basic-3 .text-container p {
+.basic-3 .project-content {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	justify-content: space-between;
+}
+
+.basic-3 .project-text {
 	overflow: hidden;
 	display: -webkit-box;
-	-webkit-line-clamp: 3;
+	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
 	text-overflow: ellipsis;
-	flex-grow: 1;
+	margin-bottom: 1rem;
+	min-height: 3rem;
+}
+
+.basic-3 .project-buttons {
+	display: flex;
+	gap: 0.5rem;
+	justify-content: flex-start;
+	margin-top: auto;
+}
+
+.btn-read-more,
+.btn-live-demo {
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 0.25rem;
+	font-size: 0.875rem;
+	font-weight: 600;
+	cursor: pointer;
+	text-decoration: none;
+	display: inline-block;
+	transition: all 0.2s;
+}
+
+.btn-read-more {
+	background-color: #0b36a8;
+	color: white;
+}
+
+.btn-read-more:hover {
+	background-color: #082258;
+}
+
+.btn-live-demo {
+	background-color: #f7f9fb;
+	color: #0b36a8;
+	border: 1px solid #0b36a8;
+}
+
+.btn-live-demo:hover {
+	background-color: #0b36a8;
+	color: white;
 }
 
 .basic-3 .image-container {
@@ -929,6 +977,113 @@ input[type='checkbox'] {
 
 .copyright a {
 	color: #9da6ac;
+}
+
+
+/****************************/
+/*     Project Modals       */
+/****************************/
+.project-modal {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.project-modal .modal-content {
+	background-color: white;
+	margin: 2rem auto;
+	padding: 2rem;
+	border-radius: 0.5rem;
+	width: 90%;
+	max-width: 700px;
+	max-height: 85vh;
+	overflow-y: auto;
+	animation: slideUp 0.3s ease-in-out;
+}
+
+@keyframes slideUp {
+	from {
+		transform: translateY(50px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.project-modal .modal-content h3 {
+	color: #0b36a8;
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	margin-top: 0;
+}
+
+.project-modal .modal-content p {
+	margin-bottom: 1rem;
+	line-height: 1.625rem;
+}
+
+.project-modal .modal-content ul {
+	margin-left: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.project-modal .modal-content ul li {
+	margin-bottom: 0.5rem;
+}
+
+.project-modal .modal-content .btn-live-demo {
+	margin-top: 1rem;
+	display: inline-block;
+}
+
+.project-modal .close {
+	color: #4d5055;
+	float: right;
+	font-size: 2rem;
+	font-weight: bold;
+	cursor: pointer;
+	line-height: 1;
+}
+
+.project-modal .close:hover,
+.project-modal .close:focus {
+	color: #0b36a8;
+}
+
+/* Scrollbar styling for modal */
+.project-modal .modal-content::-webkit-scrollbar {
+	width: 8px;
+}
+
+.project-modal .modal-content::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	border-radius: 10px;
+}
+
+.project-modal .modal-content::-webkit-scrollbar-thumb {
+	background: #0b36a8;
+	border-radius: 10px;
+}
+
+.project-modal .modal-content::-webkit-scrollbar-thumb:hover {
+	background: #082258;
 }
 
 
